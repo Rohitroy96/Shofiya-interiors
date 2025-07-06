@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sid Group</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icons/fav1.png" rel="icon">
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .gallery-grid {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns on desktop */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-grid.active {
+  display: grid;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;  /* 1 column on mobile */
+  }
+}
+
+    </style>
+
+<!---button-->
+
+
+    <!---image options from our projects-->
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+
+    .tab-btn {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background: #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .tab-btn.active {
+      background: #007bff;
+      color: white;
+    }
+
+    .gallery {
+      display: none;
+      padding: 20px;
+    }
+
+    .gallery.active {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .gallery.active {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery.active {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+     <!---image options from our projects end-->
+
+</head>
+
+<script>
+  function showGallery(id, btn) {
+    document.querySelectorAll('.gallery-grid').forEach(g => g.classList.remove('active'));
+    document.querySelectorAll('.btn-outline-body').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+<body>
+    
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/sid logo 2.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+                    <a class="text-body px-2" href="tel:+919958678770"><i class="fa fa-phone-alt text-primary me-2"></i>+91 9958678770</a>
+                    <a class="text-body px-2" href="mailto:sidgroup128@gmail.com"><i class="fa fa-envelope-open text-primary me-2"></i>sidgroup128@gmail.com</a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                    <a class="text-body px-2" href="">Terms</a>
+                    <a class="text-body px-2" href="">Privacy</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-white m-0"><img class="me-3" src="img/sid logo 2.png" alt="Icon">Sid Group</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                 <a href="project.html" class="nav-item nav-link">Our Projects</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="https://wa.link/99gksv" class="btn btn-primary py-2 px-4 d-none d-lg-block">Get Quotes</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/1.png'>">
+                <img class="img-fluid" src="img/1.png" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                              <h1 class="display-1 text-light animated slideInDown" style="color: #ffd19c;">Discover Unique Interior Solutions.</h1>                                
+                              <p class="fs-5 fw-medium text-white mb-4 pb-3" style="color: rgb(230, 255, 192);">With The Best interior designing company in NCR."</p>
+                                <a href="https://wa.link/99gksv" class="btn btn-primary py-3 px-5 animated slideInLeft">Book a Consultation.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/7.png'>">
+                <img class="img-fluid" src="img/12.png" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Unique Design for every Project.</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Creating a creative design that flawlessly mixes creativity and functionality, resulting in an unrivaled experience customized to your project's unique personality.</p>
+                                <a href="https://wa.link/99gksv" class="btn btn-primary py-3 px-5 animated slideInLeft">Get offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/6.png'>">
+                <img class="img-fluid" src="img/blue-and-white-modular-kitchen-design-Picsart-AiImageEnhancer.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Want to know how much your kitchen interiors cost?</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Get Free consulatant.</p>
+                                <a href="https://wa.link/99gksv" class="btn btn-primary py-3 px-5 animated slideInLeft">Get offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container pt-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-200 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/homeicon2.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">residential Interiors</h3>
+                        <p class="mb-0">"We offer personalized residential interior design services to transform your home into a stylish, functional, and inviting space.our team works closely with you to create interiors that reflect your unique taste, lifestyle, and comfort needs."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/comm2.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Commercials interiors</h3>
+                        <p class="mb-0">"Elevate your workspace with our commercial and office interior design services. We create professional, efficient, and visually appealing environments tailored to your business."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/tender2.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Government Tenders</h3>
+                        <p class="mb-0">"We specialize in interior design for government tenders, ensuring reliable, cost-effective, and standards-compliant solutions. Our designs are tailored to meet the unique needs of public sector spaces."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="img/34.png" alt="">
+                        <img class="img-fluid" src="img/21.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h4 class="section-title">About Us</h4>
+                    <h1 class="display-5 mb-4">A Creative Interior Design Agency For Your Dream Home</h1>
+                    <p>At SID GROUP, we specialize in providing bespoke interior solutions tailored to ourclients’ needs. Our dedicated team of five professionals brings a wealth of experienceand expertise to every project. From intricate furniture designs to stunning art pieces, our goal is to exceed your expectations and deliver excellence in every aspect of our work.</p>
+                    <p class="mb-4">We are one of the renowned quality- oriented organization and quality is our main aim towards which we are dedicated. We use Technical person throughout our service in every field and quality is our prior aim. Further we ensure that the entire task done by us meets Best quality standards.</p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
+                            <h1 class="display-1 mb-n2" data-toggle="counter-up">16</h1>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Years</h3>
+                            <h3>Working</h3>
+                            <h3 class="mb-0">Experience</h3>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Services</h4>
+                <h1 class="display-5 mb-4">We Focused On Modern Architecture And Interior Design</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-1.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-5.png" alt="Icon">
+                            <h3 class="mb-3">Architecture</h3>
+                            <p class="mb-4">Innovative and sustainable architectural designs that combine strength, functionality, and modern aesthetics.</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/2.png" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-6.png" alt="Icon">
+                            <h3 class="mb-3">Complete interior Work</h3>
+                            <p class="mb-4">Comprehensive design and execution for residential and commercial spaces.</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/modern-house-interior-design_605022-127729.avif" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-7.png" alt="Icon">
+                            <h3 class="mb-3">House Planning</h3>
+                            <p class="mb-4">Efficient and smart house planning that maximizes space, comfort, and usability while maintaining a stylish loo</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/15.png" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-8.png" alt="Icon">
+                            <h3 class="mb-3">Furniture work</h3>
+                            <p class="mb-4">Complete furniture solutions including custom designs for modular, classic, or contemporary styles — all tailored to your needs.</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/renovation.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-9.png" alt="Icon">
+                            <h3 class="mb-3">Renovation</h3>
+                            <p class="mb-4">Give your existing space a fresh, modern makeover with expert renovation services that are timely and cost-effective.</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/pr1.png" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/kit.png" alt="Icon">
+                            <h3 class="mb-3">Modular Kitchen Design</h3>
+                            <p class="mb-4"> provide expert modular kitchen design and installation services tailored to your space and lifestyle. From sleek modern layouts to functional storage solutions, our kitchens blend style with convenience</p>
+                            <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">Why Choose Us!</h4>
+                    <h1 class="display-5 mb-4">Why You Should Trust Us? Learn More About Us!</h1>
+                    <p class="mb-4">"We don’t just design spaces — we build trust. From the first sketch to the final setup, we listen, plan, and deliver exactly what you envision. Our experienced team ensures quality, transparency, and timely completion, turning your home into a reflection of you — without stress, surprises, or compromise."</p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-2.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Design Approach</h3>
+                                    <p class="mb-0">"Our design approach combines your style with smart functionality — from space planning to finishes, we create interiors that are both beautiful and practical."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-3.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Innovative Solutions</h3>
+                                    <p class="mb-0">We bring innovative solutions to every project — blending smart space-saving ideas, modern materials, and creative design to make your home uniquely functional and stylish."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-4.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Project Management</h3>
+                                    <p class="mb-0">"Our efficient project management ensures smooth execution — from planning and coordination to timely delivery, we handle every detail with precision and transparency."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="img/jec7.png" alt="">
+                        <img class="img-fluid" src="img/23.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Project Start -->
+   <div class="container-xxl project py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h4 class="section-title">Our Projects</h4>
+            <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
+        </div>
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4">
+                <div class="nav nav-pills d-flex flex-column justify-content-between h-100 me-4" style="max-width: 500px; width: 100%;">
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                        <h3 class="m-0">01. Modular Kitchen</h3>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                        <h3 class="m-0">02. Master Bedroom</h3>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                        <h3 class="m-0">03. luxury living interior</h3>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                        <h3 class="m-0">04. Office interior</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content w-100">
+
+                    <!-- Tab 1 -->
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <div class="row g-4">
+                            <div class="col-12" style="min-height: 400px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="img/blue-and-white-modular-kitchen-design-Picsart-AiImageEnhancer.jpg"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2 -->
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <div class="row g-4">
+                            <div class="col-12" style="min-height: 400px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="img/modern-bedroom-design-1-min-1024x683-Picsart-AiImageEnhancer.jpg"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3 -->
+                    <div class="tab-pane fade" id="tab-pane-3">
+                        <div class="row g-4">
+                            <div class="col-12" style="min-height: 400px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="img/Weaved-Luxury-in-Living-Room-Design-Picsart-AiImageEnhancer.jpg"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4 -->
+                    <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="row g-4">
+                            <div class="col-12" style="min-height: 400px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute img-fluid w-100 h-100" src="img/02-02.jpg"
+                                        style="object-fit: cover;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- tab-content -->
+            </div> <!-- col-lg-8 -->
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div> <!-- container-xxl -->
+
+
+<!-- Category Gallery Section Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h4 class="section-title">Our Work Categories</h4>
+      <h1 class="display-5 mb-4">Explore Designs by Space</h1>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="text-center my-3">
+      <button class="btn btn-primary py-2 px-4 active" onclick="showGallery('kitchen', this)">Modular Kitchen</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('tv', this)">TV Cabinets</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('wardrobe', this)">Wardrobes</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('living', this)">Living Room</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('bedroom', this)">Bedroom</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('entry', this)">Pooja Room</button>
+      <button class="btn btn-primary py-2 px-4" onclick="showGallery('ceiling', this)">Furniture</button>
+    </div>
+
+    <!-- Gallery: Modular Kitchen -->
+    <div id="kitchen" class="gallery-grid active">
+      <img src="img/mod2.png" alt="">
+      <img src="img/mod4.png" alt="">
+      <img src="img/mod6.png" alt="">
+      <img src="img/mod8.png" alt="">
+      <img src="img/mod5.png" alt="">
+      <img src="img/mod3.png" alt="">
+    </div>
+
+    <!-- Gallery: TV Cabinets -->
+    <div id="tv" class="gallery-grid">
+      <img src="img/tv1.png" alt="">
+      <img src="img/tv2.png" alt="">
+      <img src="img/tv3.png" alt="">
+      <img src="img/tv4.png" alt="">
+      <img src="img/tv5.png" alt="">
+      <img src="img/tv7.png" alt="">
+    </div>
+
+    <!-- Gallery: Wardrobes -->
+    <div id="wardrobe" class="gallery-grid">
+      <img src="img/war1.png" alt="">
+      <img src="img/war2.png" alt="">
+      <img src="img/war3.png" alt="">
+      <img src="img/war4.png" alt="">
+      <img src="img/war5.png" alt="">
+      <img src="img/war6.png" alt="">
+    </div>
+
+    <!-- Gallery: Living Room -->
+    <div id="living" class="gallery-grid">
+      <img src="img/living room 1.png" alt="">
+      <img src="img/living room2.png" alt="">
+      <img src="img/living room3.png" alt="">
+      <img src="img/living room4.png" alt="">
+      <img src="img/living room5.png" alt="">
+      <img src="img/living room6.png" alt="">
+    </div>
+
+    <!-- Gallery: Bedroom -->
+    <div id="bedroom" class="gallery-grid">
+      <img src="img/bedroom1.png" alt="">
+      <img src="img/bedroom2.png" alt="">
+      <img src="img/bedroom3.png" alt="">
+      <img src="img/bedroom7.png" alt="">
+      <img src="img/bedroom6.png" alt="">
+      <img src="img/bedroom8.png" alt="">
+    </div>
+
+    <!-- Gallery: Pooja Room -->
+    <div id="entry" class="gallery-grid">
+      <img src="img/poj1.png" alt="">
+      <img src="img/poj2.png" alt="">
+      <img src="img/poj3.png" alt="">
+      <img src="img/poj4.png" alt="">
+      <img src="img/poj5.png" alt="">
+      <img src="img/poj6.png" alt="">
+    </div>
+
+    <!-- Gallery: Ceiling Design -->
+    <div id="ceiling" class="gallery-grid">
+      <img src="img/fur1.png" alt="">
+      <img src="img/fur2.png" alt="">
+      <img src="img/fur3.png" alt="">
+      <img src="img/fur4.png" alt="">
+      <img src="img/fur5.png" alt="">
+      <img src="img/fur6.png" alt="">
+      <img src="img/fur7.png" alt="">
+      <img src="img/fur8.png" alt="">
+      <img src="img/fur9.png" alt="">
+      <img src="img/fur10.png" alt="">
+      <img src="img/fur11.png" alt="">
+      <img src="img/fur12.png" alt="">
+
+    </div>
+  </div>
+</div>
+
+<!-- Gallery Switch Script -->
+<!-- Category Tabs End -->
+
+<!---project end-->
+<div class="button-container text-center my-3">
+    <a href="project.html" class="btn btn-primary py-2 px-4">See More</a>
+</div>
+
+
+    
+
+
+
+    <!-- From Uiverse.io by cssbuttons-io --> 
+
+
+
+<!-- Director Message Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <h4 class="section-title">Founder's Message</h4>
+      <h1 class="display-5 mb-4">A Word From Our Visionary Leader</h1>
+    </div>
+    <div class="row align-items-center">
+      <!-- Director Photo -->
+      <div class="col-md-5 text-center text-md-start mb-4 mb-md-0 wow fadeInLeft" data-wow-delay="0.2s">
+        <img src="img/director2.png" alt="Director Photo" class="img-fluid rounded shadow" style="max-height: 400px;">
+      </div>
+      <!-- Glassmorphism Message -->
+      <div class="col-md-7 wow fadeInRight" data-wow-delay="0.4s">
+        <div class="glass-box p-4 rounded">
+          <p class="mb-3 text-white">
+            "I am delighted to introduce SID GROUP, a company born
+                                      from a passion for creating beautiful and functional
+                                                spaces. Since our inception in 2009, we have been
+                                                       committed to excellence and innovation in every project
+                                                we undertake. Our team is dedicated to turning your
+                                           vision into reality, ensuring that every detail is
+                                      meticulously crafted. Thank you for choosing SID GROUP.
+                                 We look forward to working with you."
+          </p>
+          <p class="mb-3 text-white">
+            "Warm Regards'
+          </p>
+          <h5 class="text-white mb-0">Rakesh Sharma</h5>
+          <span class="text-primary">Founder & CEO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Director Message End -->
+
+
+
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">Appointment</h4>
+                    <h1 class="display-5 mb-4">Make An free Appointment To Start Your Dream Project</h1>
+                    <p class="mb-4">Your dream space starts with a simple conversation.</p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light" style="width: 65px; height: 65px;">
+                                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Call Us Now</p>
+                                    <h3 class="mb-0">+91 9958678770</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light" style="width: 65px; height: 65px;">
+                                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Mail Us Now</p>
+                                    <h3 class="mb-0">sidgroup128@gmail.com</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Name" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" class="form-control" placeholder="Your Email" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Mobile" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <select class="form-select" style="height: 55px;">
+                                <option selected>Choose Service</option>
+                                <option value="1">Home Interior Renovation</option>
+                                <option value="2">Commercial/office Renovation</option>
+                                <option value="3">Others</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="date" id="date" data-target-input="nearest">
+                                <input type="text"
+                                    class="form-control datetimepicker-input"
+                                    placeholder="Choose Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="time" id="time" data-target-input="nearest">
+                                <input type="text"
+                                    class="form-control datetimepicker-input"
+                                    placeholder="Choose Date" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Testimonial</h4>
+                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/review1.png' alt=''>">
+                    <p class="fs-5">Sid Group redefined my living space in Gr. noida with their innovative ideas. They truly are the best interior designers in Greater noida. Amazing work!</p>
+                    <h3>Vijay Anand</h3>
+                    <span class="text-primary"></span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/rev2.png' alt=''>">
+                    <p class="fs-5">Hiring Sid Group was the best decision I made for my noida flat. They are undoubtedly the best interior designers in Noida for their creativity and precision.</p>
+                    <h3>Rashmi Beriwal</h3>
+                    <span class="text-primary"></span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/rev3.png' alt=''>">
+                    <p class="fs-5">I highly recommend Sid Group, the best interior designer in Noida. Their designs are modern and practical, and they handle everything professionally!</p>
+                    <h3>Abhishek Misra</h3>
+                    <span class="text-primary">Profession</span>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Gaur city centre,office no 128,2nd floor,Greater Noida</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>++91 99958678770</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>sidgroup128@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Services</h3>
+                    <a class="btn btn-link" href="">Architecture</a>
+                    <a class="btn btn-link" href="">Complete interior solution</a>
+                    <a class="btn btn-link" href="">House Planning</a>
+                    <a class="btn btn-link" href="">Modular Furniture</a>
+                    <a class="btn btn-link" href="">Modular Kitchen & More</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Newsletter</h3>
+                    <p>Suscribe us for getting updates.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        &copy; <a href="https://wa.link/99gksv" style="color: white;" class="footer-link" target="_blank">Sid Group,</a> All Right Reserved.
+                    </div>
+                  <div class="col-md-6 text-center text-md-end">
+                             Designed by <a href="https://wa.link/2bz9lu" style="color: white;" class="footer-link" target="_blank">Codexweb</a>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
